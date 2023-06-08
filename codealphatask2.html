@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Link Shortener</title>
+  <script>
+    function shortenLink() {
+      var longUrl = document.getElementById("longUrl").value;
+      
+      // You can implement your own logic to generate the shortened link here
+      
+      // For demonstration purposes, let's assume the shortened link is created by adding "example.com/" as a prefix
+      var shortenedUrl = "example.com/" + Math.random().toString(36).substr(2, 7);
+      
+      document.getElementById("shortenedUrl").value = shortenedUrl;
+    }
+  </script>
+</head>
+<body>
+  <h1>Link Shortener</h1>
+  
+  <form>
+    <label for="longUrl">Long URL:</label>
+    <input type="text" id="longUrl" name="longUrl" placeholder="Enter the long URL" required>
+    <br>
+    <button type="button" onclick="shortenLink()">Shorten</button>
+  </form>
+  
+  <br>
+  
+  <label for="shortenedUrl">Shortened URL:</label>
+  <input type="text" id="shortenedUrl" readonly>
+</body>
+</html>
